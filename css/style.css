@@ -22,12 +22,11 @@ header h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3em;
-    text-shadow: 2px 2px 4px #000;
+    font-size: 2.5em;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #e6f3f1;
@@ -49,7 +48,7 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: auto;
-    background-color: white;
+    background-color: #d4eae8;
 }
 
 .float-left {
@@ -68,7 +67,7 @@ form input[type="email"],
 form textarea {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #aaa;
+    border: 1.5px solid #aaa;
 }
 
 form textarea {
@@ -79,7 +78,7 @@ form input[type="submit"] {
     width: 100px;
     padding: 10px;
     background-color: #aad4cf;
-    border: none;
+    border: ;
     cursor: pointer;
 }
 
