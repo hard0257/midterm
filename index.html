@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lone Starfish</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <img src="images/lone-starfish-wide.jpg" alt="Lone Starfish">
+      <img src="starfish.jpg" alt="Starfish">
       <h1>Lone Starfish</h1>
     </header>
 
@@ -21,58 +20,46 @@
       </ul>
     </nav>
 
-    <main>
-      <article>
-        <h2>Life of a Starfish</h2>
-        <img src="images/lone-starfish.jpg" alt="Starfish" class="float-left">
-        <p>
-          Swallower catla Black angelfish grunter striped bass scissor-tail rasbora; slender mola.
-          Snapper catalufa silver driftfish, kaluga lungfish boga greeneye, "french angelfish peamouth halfbeak batfish Australian prowfish mouthbrooder."
-          Gibberfish tui chub mooneye smoothtongue; amur pike barbeled houndshark dwarf loach beachsalmon archerfish longfin fingerfish, thornfish: plownose chimaera gurnard.
-          Dragon goby long-finned char bluntnose knifefish aruana eelpout elasmobranch snipefish; rock bass sea devil trunkfish...
-        </p>
-      </article>
+    <article>
+      <h2>Life of a Starfish</h2>
+      <img id="lonestarfish" src="starfish.jpg" alt="Starfish">
+      <div class="text-wrapper">
+        <p>Swallower catla Black angelfish grunter striped bass scissor-tail rasbora...</p>
+      </div>
+    </article>
 
-      <section>
-        <h3>Facts About Starfish</h3>
-        
-        <ul>
-          <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
-          <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
-          <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
-        </ul>
-      </section>
+    <section>
+      <h2>Facts About Starfish</h2>
+      <ul>
+        <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
+        <li>Waryfish, "lionfish", longfin smelt; leopard danio dragonfish; Lost River sucker, mojarra.</li>
+        <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
+      </ul>
+    </section>
 
-      <section>
-        <h4>Contact to Learn More</h4>
-        <form>
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required>
+    <form>
+      <h2>Contact to learn more</h2>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name">
 
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email">
 
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
 
+      <h3>Would you like to visit the starfish?</h3>
+      <div class="radio-row">
+        <label><input type="radio" name="visit" value="yes"> Yes</label>
+        <label><input type="radio" name="visit" value="no"> No</label>
+        <label><input type="radio" name="visit" value="maybe"> Maybe</label>
+      </div>
 
-   <p class="visit-label">Would you like to visit the starfish?</p>
-<div class="radio-row">
-  <label>Yes <input type="radio" name="visit" value="yes"></label>
-  <label>No <input type="radio" name="visit" value="no"></label>
-  <label>May be <input type="radio" name="visit" value="may be"></label>
-</div>
-
-
-
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </main>
+      <button type="submit">SEND</button>
+    </form>
 
     <footer>
-      <p>&copy; Lone Starfish</p>
-
+      &copy; Lone Starfish.
     </footer>
   </div>
 </body>

@@ -1,11 +1,13 @@
+/* General body styling */
 body {
   background-color: #aad4cf;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-weight: 500; /* Slight bold only */
+  font-weight: 500;
 }
 
+/* Everything inside a neat box */
 .container {
   max-width: 700px;
   margin: 20px auto;
@@ -15,6 +17,7 @@ body {
   position: relative;
 }
 
+/* Header with image and text over it */
 header {
   position: relative;
   text-align: center;
@@ -37,117 +40,80 @@ header h1 {
   letter-spacing: 1.5px;
 }
 
+/* Navigation using inline-block only */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: space-between; /* aligns left, center, right */
   background-color: #d4e9e7;
-  padding: 0 20px;
+  text-align: center;
 }
 
 nav li {
-  position: relative;
-  flex: 1;
-  text-align: center;
-  font-weight: 500;
-}
-
-
-
-nav li:first-child {
-  text-align: left;
-}
-
-nav li:nth-child(2) {
-  text-align: center;
-}
-
-nav li:last-child {
-  text-align: right;
-}
-
-nav a {
   display: inline-block;
-  padding: 15px;
+  margin: 0 10px;
+}
+
+nav li a {
+  padding: 30px;
+  display: inline-block;
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
-
-nav li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 30%;
-  width: 1px;
-  height: 1em;
-  background-color: black;
-}
-
-article {
-  margin: 30px 0;
-  padding: 0 15px; /* Added horizontal padding */
-}
-
-.float-left {
+/* Float image on left */
+#lonestarfish {
+  width: 200px;
   float: left;
-  width: 150px;
-  margin: 0 20px 20px 0;
+  margin-right: 20px;
   border: 1px solid #ccc;
 }
 
-article h2 {
-  font-size: 1.5em;
-  margin-bottom: px;
-  font-weight: 600;
-}
-
-article p {
-  font-size: 0.95em;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
+/* Clear float after article */
 article::after {
   content: "";
   display: block;
   clear: both;
 }
 
-section h2 {
-  font-size: 1em;
-  font-weight: 250px;
-  
+/* Text wrapper box */
+.text-wrapper {
+  padding: 15px;
+  border: 1px solid #aaa;
+  background-color: #e7f6f5;
+  overflow: hidden;
 }
 
+/* Section headers with star before */
+h2::before {
+  content: \"★ \";
+  color: #f58c42;
+}
+
+/* Facts list */
 section ul {
   padding-left: 20px;
   list-style: disc;
 }
 
 section ul li {
-  font-size: 0.85em;
+  font-size: 0.95em;
   margin-bottom: 8px;
-  font-weight: 500;
 }
 
-
-
-/* Contact Form Styling */
+/* Contact form styling */
 form {
   background-color: #d4e9e7;
   padding: 20px;
   border: 2px solid black;
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
+  margin-top: 30px;
 }
 
 form label {
   margin-top: 10px;
   font-weight: 600;
+  display: block;
 }
 
 form input,
@@ -158,6 +124,7 @@ form textarea {
   font-size: 1em;
   background-color: white;
   border: none;
+  width: 100%;
   box-sizing: border-box;
   font-weight: 500;
 }
@@ -166,50 +133,24 @@ form textarea {
   resize: none;
 }
 
-/* Smaller Square Send Button with d4e9e7 background */
+/* Send button */
 form button {
-  width: 48px;       /* reduced size */
+  width: 48px;
   height: 30px;
   font-size: 0.9em;
-  background-color: #d4e9e7; /* exact color you wanted */
+  background-color: #d4e9e7;
   border: 1px solid black;
   cursor: pointer;
-  font-weight: normal;
 }
 
-/* Radio button row aligned properly with label text */
+/* Radio row formatting */
 .radio-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 .radio-row label {
-  display: flex;
-  flex-direction: right;
-  align-items: align;
-  gap: 8px;
+  margin-right: 20px;
   font-weight: 500;
-}
-
-/* Bigger Contact Title */
-form h2 {
-  font-size: 90em;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-form h3 {
-  font-size: 90em;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-form h4 {
-  font-size: 1000em;
-  font-weight: bold;
-  color:#333
-  margin-bottom: 15px;
 }
 
 /* Footer */
@@ -218,6 +159,5 @@ footer {
   font-size: 0.9em;
   color: #333;
   margin-top: 30px;
-  padding-right: 10px;
   font-weight: bold;
 }
