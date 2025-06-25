@@ -1,4 +1,3 @@
-/* Reset layout math to include padding/border inside width */
 *,
 *::before,
 *::after {
@@ -13,7 +12,6 @@ body {
   font-weight: 500;
 }
 
-/* Container */
 .container {
   max-width: 900px;
   margin: 1px auto;
@@ -24,7 +22,6 @@ body {
   position: relative;
 }
 
-/* Header image and title */
 .small-image-box {
   width: 100%;
   height: 250px;
@@ -85,12 +82,10 @@ nav {
   color: black;
 }
 
-/* Page content */
 .content-padding {
   padding: 20px;
 }
 
-/* Article */
 article {
   margin-top: 20px;
   margin-bottom: 3px;
@@ -115,7 +110,7 @@ h3, h4 {
 
 article p {
   font-size: 0.8em;
-  line-height: 1.6;
+  line-height: 1.60;
   margin-bottom: -1px;
   margin-top: 8px;
   margin-left: 5px;
@@ -138,7 +133,6 @@ article::after {
   margin-top: 1px;
 }
 
-/* Sections */
 section h3,
 section h4 {
   font-weight: 400;
@@ -179,14 +173,13 @@ section ul li::marker {
   border: 3px solid black;
 }
 
-/* Form */
 form {
   max-width: 880px;
   margin: 10px auto;
   padding: 15px;
   background-color: #d4e9e7;
   border: 1.5px solid black;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 form label {
@@ -226,7 +219,7 @@ form textarea {
 
 .radio-row input[type="radio"] {
   margin-right: 0px;
-  vertical-align: middle;
+  vertical-align: center;
   width: 16px;
   top: 1px;
   transform: translateY(5px);
@@ -238,7 +231,6 @@ form textarea {
   font-weight: 510;
 }
 
-/* Button */
 form button {
   width: 48px;
   height: 30px;
@@ -251,7 +243,6 @@ form button {
   margin-top: 5px;
 }
 
-/* Footer */
 footer {
   text-align: right;
   font-size: 0.9em;
