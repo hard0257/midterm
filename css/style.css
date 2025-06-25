@@ -1,4 +1,10 @@
-/* General body styling */
+/* Reset layout math to include padding/border inside width */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #aad4cf;
   font-family: Arial, sans-serif;
@@ -7,125 +13,197 @@ body {
   font-weight: 500;
 }
 
-/* Everything inside a neat box */
+/* Container */
 .container {
-  max-width: 700px;
-  margin: 20px auto;
+  max-width: 900px;
+  margin: 1px auto;
   background-color: #d4e9e7;
-  padding: 20px;
-  border: 1px solid #ccc;
+  padding: 0;
+  border: none;
+   margin-bottom: 20px;
   position: relative;
 }
 
-/* Header with image and text over it */
-header {
-  position: relative;
-  text-align: center;
-}
-
-header img {
+/* Header image and title */
+.small-image-box {
   width: 100%;
-  height: auto;
+  height: 250px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #d4e9e7;
+}
+
+.small-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-header h1 {
+.small-image-box h1 {
   position: absolute;
-  top: 80%;
-  left: 50%;
+  top: 58%;
+  left: 51%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  
 }
 
-/* Navigation using inline-block only */
-nav ul {
+nav {
+  text-align: center;
+  background-color: #d4e9e7;
+  margin-top: -15px;   /* pulls whole nav box 10px up */
+  padding: 10px 0;     /* padding inside nav box */
+}
+
+.nav-links {
   list-style: none;
   padding: 0;
-  margin: 0;
-  background-color: #d4e9e7;
-  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
 }
 
-nav li {
+.nav-links li {
   display: inline-block;
-  margin: 0 10px;
+  font-family: Arial, sans-serif;
 }
 
-nav li a {
-  padding: 30px;
-  display: inline-block;
+.nav-links li a {
+  padding: 15px 110px;
   text-decoration: none;
   color: black;
-  font-weight: bold;
 }
 
-/* Float image on left */
-#lonestarfish {
-  width: 200px;
+.nav-links .divider {
+  font-size: 1.5em;
+  font-weight: normal;
+  padding: 0 6px;
+  color: black;
+ 
+}
+
+/* Page content */
+.content-padding {
+  padding: 20px;
+}
+
+/* Article */
+article {
+  margin-top: 20px;
+  margin-bottom: 3px;
+  padding: 0 1px;
+  overflow: hidden;
+}
+
+article h2 {
+  font-size: 1.75em;
+  margin-bottom: 7px;
+  margin-top: 0;
+  margin-left: 3px;
+  font-weight: 450;
+}
+h3, h4 {
+  font-size: 1.5em;
+  font-weight: 625;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+article p {
+  font-size: 0.8em;
+  line-height: 1.60;
+  margin-bottom: -1px;
+  margin-top: 8px;
+  margin-left: 5px;
+  font-weight: 540;
+  
+}
+
+
+article img.float-left {
   float: left;
-  margin-right: 20px;
-  border: 1px solid #ccc;
+  margin-right: 15px; /* increased from 20px */
+  margin-left: 5px; /* only if you still want the image pulled left */
+  margin-bottom: 10px;
+  width: 200px;
+  border: none;
 }
-
-/* Clear float after article */
 article::after {
   content: "";
   display: block;
   clear: both;
+  margin-top: 1px; /* This adds space BELOW the image when text wraps under */
 }
 
-/* Text wrapper box */
-.text-wrapper {
-  padding: 15px;
-  border: 1px solid #aaa;
-  background-color: #e7f6f5;
-  overflow: hidden;
+/* Sections */
+section h3,
+section h4 {
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 
-/* Section headers with star before */
-h2::before {
-  content: \"★ \";
-  color: #f58c42;
-}
-
-/* Facts list */
 section ul {
-  padding-left: 20px;
+  padding-left: 10px;
   list-style: disc;
+  max-width: 100%;
+  margin-bottom: -10px;
+  margin-top: 9.5px;
+  margin-left: 10px;
 }
 
 section ul li {
-  font-size: 0.95em;
-  margin-bottom: 8px;
+  font-size: 0.8em;
+  line-height: 1.4;
+  margin-left: 8px;
+  margin-bottom: -10px;
+  margin-top: -0.5px;
+  font-weight: 540;
+}
+section ul li::marker {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black;
+}
+.black-circle {
+  width: 20px;
+  height: 10px;
+  margin-bottom: -20px;
+  border-radius: 50%;
+  background-color: black;
+  border: 3px solid black; /* makes the circle border thicker */
 }
 
-/* Contact form styling */
+/* Form */
 form {
+  max-width: 880px;
+  margin: 10px auto;
+  padding: 15px;
   background-color: #d4e9e7;
-  padding: 20px;
-  border: 2px solid black;
-  margin-top: 30px;
+  border: 1.5px solid black;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 form label {
-  margin-top: 10px;
-  font-weight: 600;
   display: block;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 form input,
 form textarea {
+  width: 100%;
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 1em;
   background-color: white;
   border: none;
-  width: 100%;
-  box-sizing: border-box;
   font-weight: 500;
 }
 
@@ -133,31 +211,53 @@ form textarea {
   resize: none;
 }
 
-/* Send button */
-form button {
-  width: 48px;
-  height: 30px;
-  font-size: 0.9em;
-  background-color: #d4e9e7;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-/* Radio row formatting */
 .radio-row {
-  margin: 10px 0;
+  margin-top: 10px;
 }
 
 .radio-row label {
-  margin-right: 20px;
+  display: inline-flex;        /* makes label and circle/text inline */
+  align-items: center;         /* vertically center circle and text */
+  margin-right: 8px;          /* space between Yes / No / Maybe */
+  font-size: 0.95em;
   font-weight: 500;
+  cursor: pointer;
 }
 
-/* Footer */
+.radio-row input[type="radio"] {
+  margin-right: 0px;           /* small gap between circle and text */
+  vertical-align: center;
+  width: 16px;
+  top: 1px;
+  transform: translateY(5px);  /* ✅ This lowers the circle */
+}
+
+.radio-label {
+  margin-top: 0;               /* keeps question close */
+  display: block;
+  font-weight: 510;
+}
+
+
+/* Button */
+form button {
+  width: 48px;
+  height: 30px;
+  font-size: 0.6em;
+  background-color: #d4e9e7;
+  border: 1.2px solid black;
+  cursor: pointer;
+  font-weight: normal;
+  display: block;
+  margin-top: 5px;
+}
+
+
+
 footer {
   text-align: right;
   font-size: 0.9em;
   color: #333;
-  margin-top: 30px;
+  padding: 10px 30px 20px 30px; /* top, right, bottom, left padding */
   font-weight: bold;
 }
